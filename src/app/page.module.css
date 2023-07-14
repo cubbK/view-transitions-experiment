@@ -1,0 +1,36 @@
+.main {
+  font-family: var(--font-mono);
+  padding: 0;
+  view-transition-name: main;
+}
+
+.header {
+  padding: 20px 50px;
+  display: grid;
+  grid-template-columns: 1fr 100px 100px;
+  height: 50px;
+  background-color: cadetblue;
+}
+
+.headerItem {
+  display: flex;
+  align-items: center;
+}
+
+.mainDisplay {
+  width: 100vw;
+  background-color: lightgray;
+  height: 50vh;
+}
+
+.page1 {
+  width: 100vw;
+  background-color: blueviolet;
+  height: 50vh;
+}
+
+.page2 {
+  width: 100vw;
+  background-color: greenyellow;
+  height: 50vh;
+}

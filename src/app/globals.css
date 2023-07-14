@@ -1,0 +1,50 @@
+:root {
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+}
+body {
+  margin: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes slide-to-left {
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+/* 'Forward' transitions */
+::view-transition-old(main) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+}
+
+::view-transition-new(main) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
+
+/* Overrides for 'back' transitions */
+.back-transition::view-transition-old(main) {
+  animation-name: slide-to-right;
+}
+
+.back-transition::view-transition-new(main) {
+  animation-name: slide-from-left;
+}
