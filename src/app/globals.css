@@ -7,18 +7,6 @@ body {
   margin: 0;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-}
-
-@keyframes fade-out {
-  to {
-    opacity: 0;
-  }
-}
-
 @keyframes slide-from-right {
   from {
     transform: translateX(100vw);
@@ -41,10 +29,10 @@ body {
 }
 
 /* Overrides for 'back' transitions */
-.back-transition::view-transition-old(main) {
-  animation-name: slide-to-right;
+.back-transition {
+  animation-name: slide-from-left;
 }
 
-.back-transition::view-transition-new(main) {
-  animation-name: slide-from-left;
+.back-transition {
+  animation-name: slide-to-left;
 }
